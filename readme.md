@@ -100,5 +100,5 @@ components
     * либо же, вы можете в директориях ```src/js/libs/``` ```src/styles/libs/``` создать свои файлы и на выходе получить ``` vendor.min.js ``` и ``` vendor.min.css ```
 
 ## :envelope: Контакты
-* Instagram: [@langston](https://www.instagram.com/bycoulot/)
-* Telegram: [@langston](https://t.me/maketryuk)
+* Instagram: [@bycoulot](https://www.instagram.com/bycoulot/)
+* Telegram: [@maketryuk](https://t.me/maketryuk)
