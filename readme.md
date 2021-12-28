@@ -3,8 +3,8 @@
 ## :hammer_and_wrench: Установка
 * установите [NodeJS](https://nodejs.org/en/) ***12-ой версии*** (на новых версиях NodeJS имеются проблемы с установкой некоторых пакетов)
 * скачайте сборку с помощью [Git](https://git-scm.com/downloads): ```git clone https://github.com/langstons/langstons-gulp-starter.git```
-* установите ```gulp``` глобально: ```npm i --global gulp-cli```
-* перейдите в скачанную папку со сборкой: ```cd gulp-scss-starter```
+* установите ```gulp``` глобально: ```npm i --global gulp-cli gulp```
+* перейдите в скачанную папку со сборкой: ```cd langston-gulp-starter```
 * скачайте необходимые зависимости: ```npm i```
 * чтобы начать работу, введите команду: ```npm run dev``` (режим разработки)
 * чтобы собрать проект, введите команду ```npm run build``` (режим сборки)
