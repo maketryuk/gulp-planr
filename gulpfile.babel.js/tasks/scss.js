@@ -21,8 +21,6 @@ import concat from 'gulp-concat';
 // CSS include =====>
 export default () => {
   gulp.src('./src/styles/libs/**/*.{sass,scss}')
-    .pipe(sassGlob())
-    .pipe(sass(app.sass))
     .pipe(concat('vendor.min.css'))
     .pipe(csso())
   .pipe(gulp.dest(path.scss.dest, { sourcemaps: app.isDev }))
