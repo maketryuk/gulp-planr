@@ -12,7 +12,7 @@ export default {
 
   scss: {
     src: pathSrc + '/styles/main.{scss,sass}',
-    watch: [pathSrc + '/styles/**/*.{scss,sass}', pathSrc + '/components/blocks/**/*.{scss,sass}'],
+    watch: [pathSrc + '/styles/**/*.{scss,sass}', pathSrc + '/components/**/*.{scss,sass}'],
     dest: pathDest + '/css'
   },
 

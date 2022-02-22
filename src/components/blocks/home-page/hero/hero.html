@@ -1,0 +1,47 @@
+<section class="hero">
+  <div class="container">
+    <h1>Die Planung in ruhige Gewässer manövrieren</h1>
+    <div class="hero__image">
+      <img src="img/hero-background.svg" alt="Decor image">
+    </div>
+    <p class="hero__description">In PLANR kommt zusammen, was die Planung, Kommunikation und Informationsübermittlung jedes Unternehmens in der Baubranche vereinfacht!</p>
+  </div>
+  <div class="swiper plan__slider">
+    <div class="swiper-wrapper">
+      @@loop('../../../UI/plan-slide.html', [
+        { "image": "img/plan/icon-1.svg", "text": "Personalplanung" },
+        { "image": "img/plan/icon-2.svg", "text": "Absenzenplanung" },
+        { "image": "img/plan/icon-3.svg", "text": "Vakanzenplanung" },
+        { "image": "img/plan/icon-4.svg", "text": "Arbeitmittelplanung" },
+        { "image": "img/plan/icon-5.svg", "text": "Berechnung der Auslastung" },
+        { "image": "img/plan/icon-6.svg", "text": "Individualisierung der Arbeitszeiten und Feiertag" },
+        { "image": "img/plan/icon-7.svg", "text": "Verschiedene Ansichten und Filtermöglichkeiten" },
+      ])
+    </div>
+    <div class="swiper-navigation">
+      <div class="swiper-button-prev plan__button-prev"></div>
+      <div class="swiper-pagination plan__pagination"></div>
+      <div class="swiper-button-next plan__button-next"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="video">
+      <div class="video__preview">
+        <img src="img/video-preview.png" alt="Video preview">
+      </div>
+      <button class="video__play">
+        <span class="video__play-content">
+          <i class="icon-play"></i>
+        </span>
+      </button>
+      <div class="video__item">
+        <iframe
+          src="https://www.youtube.com/embed/IUX1GNpdilA" 
+          title="YouTube video player"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>

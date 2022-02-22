@@ -16,6 +16,7 @@ import fontsInclude from './tasks/fonts.js';
 // Watch Files =====>
 const watcher = () => {
   browserSync.init({
+    notify: false,
     tunnel: "langston",
     server: {
       baseDir: path.root

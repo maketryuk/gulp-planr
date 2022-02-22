@@ -1,0 +1,123 @@
+.team {
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+  h1 {
+    margin-bottom: 36px;
+  }
+  .site-description {
+    text-align: center;
+    margin: 0 auto 40px;
+    max-width: 700px;
+  }
+  &__table {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    margin: -15px;
+  }
+  &__wrapper {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &:hover {
+      .team {
+        &__photo {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  &__photo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    min-height: 255px;
+    background: $color-white;
+    border-radius: 20px;
+    transition: $transition-normal;
+    picture,
+    img {
+      display: block;
+    }
+  }
+  &__name {
+    margin: 20px 0 4px;
+    color: $color-text-main;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  &__position {
+    display: block;
+    color: $color-text-main;
+    font-size: 18px;
+    font-weight: 350;
+    line-height: 1.2;
+  }
+  &__background {
+    display: none;
+    z-index: -1;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    img,
+    source,
+    picture {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+// Media 640px =====>
+@media screen and (min-width: 640px) {
+  .team {
+    &__wrapper {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+}
+
+// Media 992px =====>
+@media screen and (min-width: 992px) {
+  .team {
+    h1 {
+      margin-bottom: 48px;
+    }
+    .site-description {
+      margin-bottom: 64px;
+    }
+    &__table {
+      margin: -30px -15px;
+    }
+    &__wrapper {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      padding: 30px 15px;
+    }
+    &__background {
+      display: block;
+    }
+  }
+}
+
+// Media 1200px =====>
+@media screen and (min-width: 1200px) {
+  .team {
+    &__wrapper {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+}

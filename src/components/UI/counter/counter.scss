@@ -1,0 +1,117 @@
+.counter {
+  &__item {
+    display: flex;
+    align-items: center;
+    .tooltip {
+      position: relative;
+      cursor: pointer;
+      margin-left: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__trigger {
+        color: $color-purple-main;
+        font-size: 20px;
+        &:hover + .tooltip__label {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      &__label {
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        bottom: calc(100% + 16px);
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 300px;
+        min-width: 300px;
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        background: $color-white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 30px rgba(188, 188, 188, 0.25);
+        color: $color-text-main;
+        font-size: 18px;
+        font-weight: 350;
+        line-height: 1.5;
+        transition: $transition-normal;
+        &::before {
+          content: " ";
+          position: absolute;
+          top: calc(100% - 2px);
+          left: 50%;
+          width: 0;
+          height: 0;
+          margin-left: -10px;
+          border-left: solid transparent 10px;
+          border-right: solid transparent 10px;
+          border-top: solid $color-white 10px;
+          border-radius: 10px;
+          box-shadow: 0px 4px 30px rgba(188, 188, 188, 0.25);
+        }
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    h5 {
+      color: $color-text-main;
+      font-size: 18px;
+      font-weight: 350;
+      line-height: 1.5;
+    }
+  }
+  &__wrapper {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2px 8px;
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 45px;
+    min-height: 45px;
+    background: $color-white;
+    border-radius: 10px;
+  }
+  &__input {
+    margin-right: 8px;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: $color-text-main;
+    font-size: 18px;
+    font-weight: 350;
+    line-height: 1.5;
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__plus,
+  &__minus {
+    cursor: pointer;
+    display: flex;
+    i {
+      color: $color-text-main;
+      font-size: 20px;
+    }
+    &.counter__plus {
+      transform: rotate(180deg);
+    }
+  }
+}
