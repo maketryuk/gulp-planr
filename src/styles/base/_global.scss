@@ -318,6 +318,22 @@ h2 {
 	}
 }
 
+.scroll-container {
+	min-height: 100vh;
+	max-height: 100vh;
+}
+
+.scrollbar-thumb {
+	background: $color-purple-main !important;
+	margin: 4px 0;
+	width: 6px !important;
+}
+
+.scrollbar-track {
+	background: transparent !important;
+	right: 2px !important;
+}
+
 // Media 992px =====>
 @media screen and (min-width: 992px) {
 	.site__title {
