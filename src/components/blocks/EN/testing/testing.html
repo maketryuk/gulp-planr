@@ -1,0 +1,29 @@
+<section class="testing">
+  <div class="container">
+    <h1 class="site__title">Test</h1>
+    <p class="site-description">30 days free trial incl. basic setup and introduction via online meeting</p>
+    <form action="" id="form" class="form">
+      @@loop('../../../UI/form-field.html', [
+        { "type": "text", "name": "user_name", "id": "user_name", "attr": "", "placeholder": "Name" },
+        { "type": "text", "name": "user_company", "id": "user_company", "attr": "", "placeholder": "Company" },
+        { "type": "email", "name": "user_email", "id": "user_email", "attr": "", "placeholder": "E-Mail" },
+        ])
+      <div class="counter__table">
+        @@loop('../../../UI/counter/counter.html', [
+          { "title": "Number of planners", "tooltip": "Jene Mitarbeitenden, welche PLANR in vollem Umfang brauchen um die Planung und Einteilung vorzunehmen." },
+          { "title": "Number of viewers", "tooltip": "Jene Mitarbeitenden, welche lediglich die Informationen auf dem Handy abrufen." },
+        ])
+      </div>
+      <button type="submit" class="btn-primary">
+        Request trial version
+      </button>
+      <p class="site-description">We will contact you within 24h</p>
+    </form>
+  </div>
+  <div class="testing__background">
+    <img src="img/contacts-background.svg" alt="Decor image">
+  </div>
+  <div class="birds">
+    <img src="img/birds.svg" alt="Decor image">
+  </div>
+</section>

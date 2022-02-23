@@ -1,0 +1,22 @@
+<section class="team">
+  <div class="container">
+    <h1 class="site__title">Team</h1>
+    <p class="site-description">
+      Wir sind ein junges Unternehmen aus Zürich mit dem Ziel, Software zu erstellen, welche möglichst vielen Menschen das Leben vereinfacht.
+    </p>
+    <div class="team__table">
+      @@loop('../../../UI/team-card.html', [
+        { "name": "Tobi", "position": "BSc CS ZHAW Co-Founder & Project Lead", "image": "img/team/user-1.svg" },
+        { "name": "Dejan", "position": "MSc CS ETH Co-Founder & Lead Software Engineer", "image": "img/team/user-2.svg" },
+        { "name": "Dirk", "position": "BSc CS ZHAW Partner & Lead Software Engineer", "image": "img/team/user-3.svg" },
+        { "name": "Andrej", "position": "BSc CS TUKE Frontend Software Engineer", "image": "img/team/user-4.svg" },
+        { "name": "Denisa", "position": "Frontend Software Engineer", "image": "img/team/user-5.svg" },
+        { "name": "Nicolas", "position": "In BSc BA HSG Business Developer", "image": "img/team/user-6.svg" },
+        { "name": "Patrik", "position": "Fullstack Software Engineer", "image": "img/team/user-7.svg" },
+      ])
+    </div>
+  </div>
+  <div class="team__background">
+    <img src="img/team-background.svg" alt="Decor image">
+  </div>
+</section>

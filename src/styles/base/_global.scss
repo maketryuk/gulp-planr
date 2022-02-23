@@ -245,6 +245,20 @@ h2 {
 	margin: 0 2px;
 }
 
+// Customization scrollbar
+.os-theme-dark>.os-scrollbar, .os-theme-light>.os-scrollbar {
+	padding: 8px 2px;
+}
+
+.os-theme-dark>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
+	background: #D9C2FE;
+}
+
+.os-theme-dark>.os-scrollbar:hover>.os-scrollbar-track>.os-scrollbar-handle,
+.os-theme-dark>.os-scrollbar:active>.os-scrollbar-track>.os-scrollbar-handle {
+	background: $color-purple-main;
+}
+
 .video {
 	z-index: 10;
 	position: relative;

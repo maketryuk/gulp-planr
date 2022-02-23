@@ -1,0 +1,36 @@
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="Logo of Planr">
+    </a>
+    <nav class="nav">
+      <ul class="nav__list">
+        @@loop('../../../UI/nav-link.html', [
+          { "title": "Produkt", "path": "product.html" },
+          { "title": "Preise", "path": "price.html" },
+          { "title": "Team", "path": "team.html" },
+          { "title": "Testen", "path": "testing.html" },
+        ])
+      </ul>
+      <div class="language dropdown">
+        <button class="language__item dropdown__trigger">
+          <img src="img/languages/de.svg" alt="Icon of Language">
+          <span class="language__title">
+            DE
+          </span>
+          <i class="icon-arrow-dropdown"></i>
+        </button>
+        <div class="language__list dropdown__item">
+          <a href="en-index.html" class="language__item">
+            <img src="img/languages/en.svg" alt="Icon of Language">
+            <span class="language__title">
+              EN
+            </span>
+          </a>
+        </div>
+      </div>
+      <img src="img/nav-background.svg" alt="Background picture" class="nav__background">
+    </nav>
+    <button class="burger"></button>
+  </div>
+</header>

@@ -26,7 +26,7 @@ overlay?.addEventListener("click", () => {
 });
 
 // Custom switch button
-let switchLabel = document.querySelectorAll(".switch__label")
+let switchLabel = document.querySelectorAll(".switch__label");
 
 switchLabel?.forEach((e) => {
   e.addEventListener("click", () => {
@@ -76,7 +76,7 @@ counterItem?.forEach((e) => {
       null
     }
   });
-})
+});
 
 // Open menu on click to Burger
 let burger = document.querySelector(".burger");
@@ -84,8 +84,8 @@ let header = document.querySelector(".header");
 
 burger.addEventListener("click", () => {
   header.classList.toggle("js-nav-open");
-  lockScroll()
-})
+  lockScroll();
+});
 
 // Video
 let video = document.querySelector(".video__item");
@@ -105,7 +105,7 @@ modalTrigger?.forEach((e) => {
   e.addEventListener("click", () => {
     modalToggleVisible();
   });
-})
+});
 
 const modalToggleVisible = () => {
   modalWindow.classList.toggle("js-show");
@@ -113,8 +113,8 @@ const modalToggleVisible = () => {
   lockScroll();
   setTimeout( () => {
     modalWindow.classList.remove("js-submit");
-  }, 300)
-}
+  }, 300);
+};
 
 // Validate form
 if (document.querySelector("#form")) {
@@ -151,7 +151,11 @@ if (document.querySelector("#form")) {
     ])
     .onSuccess((e) => {
       e.preventDefault();
-      modalWindow.classList.add("js-submit");
+      if (modalWindow) {
+        modalWindow.classList.add("js-submit")
+      } else {
+        window.location.href = 'thanks.html';
+      }
     });
   
   if (document.querySelector("#user_company")) {
@@ -162,14 +166,14 @@ if (document.querySelector("#form")) {
         errorMessage: "Company is required",
       },
     ])
-  }
-}
+  };
+};
 
 // Dropdown"s
 if (!Element.prototype.closest) {
 	if (!Element.prototype.matches) {
 		Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-	}
+	};
 	Element.prototype.closest = function (s) {
 		var el = this;
 		var ancestor = this;
@@ -180,7 +184,7 @@ if (!Element.prototype.closest) {
 		} while (ancestor !== null);
 		return null;
 	};
-}
+};
 
 function closeOpenNavs() {
   var openDrops = document.querySelectorAll(".dropdown__trigger");
@@ -188,9 +192,9 @@ function closeOpenNavs() {
 		var openDropdown = openDrops[i];
 		if (openDropdown.parentElement.classList.contains("js-open")) {
 		  openDropdown.parentElement.classList.remove("js-open");
-		}
-	}  
-}
+		};
+	};
+};
 
 document.addEventListener("click", function (event) {
 	if (!event.target.closest(".dropdown__trigger")){
@@ -230,7 +234,12 @@ const planSlider = new Swiper(".plan__slider", {
   },
 });
 
-if (!window.matchMedia("(min-width: 992px)").matches) {
+if (window.matchMedia("(min-width: 992px)").matches) {
+  // Custom scrollbar
+  document.addEventListener("DOMContentLoaded", function() {
+    OverlayScrollbars(document.querySelectorAll("body"), { });
+  });
+} else {
   // Benefits slider
   const benefitsSlider = new Swiper(".benefits__slider", {
     loop: false,
@@ -251,5 +260,4 @@ if (!window.matchMedia("(min-width: 992px)").matches) {
       prevEl: ".benefits__button-prev",
     },
   });
-} else {
-}
+};
