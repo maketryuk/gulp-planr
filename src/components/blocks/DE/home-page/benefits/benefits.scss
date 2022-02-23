@@ -12,6 +12,7 @@
     background: $color-white;
     box-shadow: $shadow-main;
     border-radius: 20px;
+    transition: $transition-normal;
   }
   &__number {
     margin-bottom: 20px;

@@ -154,7 +154,11 @@ if (document.querySelector("#form")) {
       if (modalWindow) {
         modalWindow.classList.add("js-submit")
       } else {
-        window.location.href = 'thanks.html';
+        if (document.documentElement.lang === "en") {
+          window.location.href = 'en-thanks.html';
+        } else if (document.documentElement.lang === "de") {
+          window.location.href = 'thanks.html';
+        }
       }
     });
   
@@ -236,22 +240,8 @@ const planSlider = new Swiper(".plan__slider", {
 
 if (window.matchMedia("(min-width: 992px)").matches) {
   // Custom scrollbar
-  // document.addEventListener("DOMContentLoaded", function() {
-  //   OverlayScrollbars(document.querySelectorAll("body"), { });
-  // });
-  var fixedElem = document.querySelector('.fixed-scroll');
-
-  var scrollbar = Scrollbar.init(document.querySelector('.scroll-container'), options);
-
-  const options = {
-    damping: 0.1,
-  };
-
-  scrollbar.addListener(function(status) {
-    var offset = status.offset;
-    
-    fixedElem.style.top = offset.y + 'px';
-    fixedElem.style.left = offset.x + 'px';
+  document.addEventListener("DOMContentLoaded", function() {
+    OverlayScrollbars(document.querySelectorAll("body"), { });
   });
 } else {
   // Benefits slider
